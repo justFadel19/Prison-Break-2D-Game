@@ -1,0 +1,58 @@
+intro: i made tile-based levels (maps) using sprite sheets ( in inspector switching sprite mode from single to multiple and slice it ),
+
+next, in the hierarchy.. i made 2D object --> Tilemap --> rectangular ( Tilemap Grid ),
+
+from windows --> 2D --> Tile Palette --> create new palette --> (Platforms palette) this is a prefab saved in tiles folder, our palette is arrangement of our tiles.
+
+
+6th) using unity rule Tiles, in Sprites folder i created a Rule Tile.
+
+7th) in the hierarchy i made an empty game object for the player(scofield) and added an animator component to it and a sprite renderer that indicates the player's sprite (the view),
+
+in Animations file --> right click and create --> animator controller (Player),
+i created an animation of the player's state of 5 to 8 called (Idle) and add it to the controller renaming it to (idling),
+
+in Scofield inspector in animator component i added the animator(Player) in the folder to the animator's component controller.
+
+8th) i made a second animation called (Running) of 19 to 28 then added it in the animator (Player),
+
+and by clicking right click on the (Idling)animation  make transition,
+
+then i added a Bool parameter called (isRunning) and added it to conditions in the transition,
+
+then by right click on (running) make transition back to (idling),
+
+THEN ADDED A 3RD ANIMATION CALLED (Climbing) AND DID THE SAME PROCESS.
+
+ 
+10th) i added to the platforms tilemap a tilemap collider and a composite collider so there is no gaps between the tiles,
+
+added a capsule collider and a rigidbody.
+
+
+11th) from package manager --> installed input system,
+in (Scofield) inspector --> add component --> player input --> then add action --> double click on the action and add (Jump) --> in Jump add 2 bindings (space, button south(Gamepad)),
+
+In (Player input) in (Scofield) inspector --> open input settings and create setting asset,
+
+Created a (PlayerMovement) script and added it to the player(scofield),
+
+in the (PlayerMovement) script --> i made a method (OnMove) to get the input value and store it in our varible (moveInput).
+
+12th) comments in our (PlayerMovement) script.
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
